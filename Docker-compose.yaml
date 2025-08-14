@@ -1,11 +1,11 @@
-version: '2.38.2'
+version: '3.8'
 
 services:
 
   backend:
-    build: backend
-    context: ./backend
-    dockerfile: Dockerfile-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile-backend
     hostname: backend-host
     volumes:
       - ./backend:/app
@@ -15,9 +15,9 @@ services:
       - ares-network
 
   frontend:
-    build: frontend
-    context: ./frontend
-    dockerfile: Dockerfile-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile-frontend
     hostname: frontend-host
     volumes:
       - ./frontend:/app
