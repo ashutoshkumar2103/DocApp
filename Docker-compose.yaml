@@ -4,6 +4,7 @@ services:
 
   backend:
     build: backend
+    dockerfile: Dockerfile-backend
     hostname: backend-host
     volumes:
       - ./backend:/app
@@ -14,6 +15,7 @@ services:
 
   frontend:
     build: frontend
+    dockerfile: Dockerfile-frontend
     hostname: frontend-host
     volumes:
       - ./frontend:/app
